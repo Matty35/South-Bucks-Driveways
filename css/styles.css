@@ -400,6 +400,33 @@ h1::after {
   margin-top: var(--space-5);
 }
 
+/* Trust markers strip (hero) */
+.trust-strip {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.trust-strip li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.trust-strip li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+}
+
 /* --------------------------------------------------------------------------
    11. CARDS
    -------------------------------------------------------------------------- */
@@ -428,6 +455,80 @@ h1::after {
 
 .card:has(h3 a):hover {
   border-color: var(--accent-strong);
+}
+
+/* Materials comparison teaser */
+.compare-card .price {
+  display: block;
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+}
+
+.compare-card .compare-note {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+/* Process steps */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-5);
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: calc(var(--space-6) + var(--space-3));
+}
+
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+/* FAQ (details/summary) */
+.faq details {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: var(--tap-target);
+  padding-block: var(--space-3);
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.faq summary::after {
+  content: "+";
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  color: var(--accent-strong);
+  line-height: 1;
+  flex: none;
+}
+
+.faq details[open] summary::after {
+  content: "−";
+}
+
+.faq details > p,
+.faq details > ul {
+  padding-bottom: var(--space-4);
+  max-width: 68ch;
 }
 
 /* --------------------------------------------------------------------------
@@ -570,6 +671,10 @@ textarea {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .footer-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -588,6 +693,10 @@ textarea {
   }
 
   .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .steps {
     grid-template-columns: repeat(4, 1fr);
   }
 
