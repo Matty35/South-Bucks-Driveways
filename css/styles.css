@@ -495,6 +495,21 @@ h1::after {
   color: var(--accent-strong);
 }
 
+/* Guide articles: direct answers and dateline */
+.answer {
+  border-left: 3px solid var(--accent);
+  padding: var(--space-2) 0 var(--space-2) var(--space-4);
+  font-weight: 500;
+  max-width: 62ch;
+}
+
+.guide-meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: color-mix(in srgb, var(--text-invert) 78%, var(--surface-invert));
+  margin-top: var(--space-4);
+}
+
 /* Cost tables — figures always mono; wide tables scroll in their wrapper */
 .table-wrap {
   overflow-x: auto;
