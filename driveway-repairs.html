@@ -281,47 +281,120 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "My block paving has sunk where cars turn — can it be saved?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Usually yes: we lift the blocks, rebuild and compact the base in the affected area, and re-lay the same blocks. Widespread sinking across the whole driveway indicates an under-built sub-base, where patch repairs only chase the problem around."
-        }
+        "@type": "Service",
+        "name": "Driveway Repairs",
+        "serviceType": "Driveway repair and restoration",
+        "description": "Driveway repairs across Beaconsfield, Gerrards Cross and the Chalfonts: sunken paving re-laid, re-sanding and sealing, resin overlays, drainage remedials — and honest advice on when repair beats replacement.",
+        "url": "https://southbucksdriveways.co.uk/driveway-repairs.html",
+        "provider": {
+          "@id": "https://southbucksdriveways.co.uk/#business"
+        },
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Beaconsfield"
+          },
+          {
+            "@type": "Place",
+            "name": "Gerrards Cross"
+          },
+          {
+            "@type": "Place",
+            "name": "Chalfont St Peter"
+          },
+          {
+            "@type": "Place",
+            "name": "Chalfont St Giles"
+          },
+          {
+            "@type": "Place",
+            "name": "Little Chalfont"
+          },
+          {
+            "@type": "Place",
+            "name": "Amersham"
+          },
+          {
+            "@type": "Place",
+            "name": "Penn"
+          },
+          {
+            "@type": "Place",
+            "name": "Knotty Green"
+          },
+          {
+            "@type": "Place",
+            "name": "Seer Green"
+          },
+          {
+            "@type": "Place",
+            "name": "Jordans"
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Do I need planning permission to repair my driveway?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No — like-for-like repair is outside the planning rules, and up to 5 square metres can be repaired or replaced with any material. Permission becomes a question when you enlarge the surfaced area or resurface entirely with an impermeable material, or on Article 4 and conservation-area streets."
-        }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://southbucksdriveways.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Driveway Repairs",
+            "item": "https://southbucksdriveways.co.uk/driveway-repairs.html"
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Why does water pond on my driveway after rain?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Usually a silted soakaway or channel drain, a settlement low spot, or falls built wrong from the start. A free assessment identifies which before anything is quoted."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you resurface over an old concrete drive instead of digging it up?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "If the slab is sound — no rocking sections, no active cracks, legitimate drainage — a resin bound overlay gives a new surface at roughly half the full build-up cost. The base is tested first because an overlay inherits every fault beneath it."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is re-sanding and sealing block paving worth it?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "On structurally sound paving, yes: refilled joints restore the interlock that stops blocks rocking and edges creeping, and sealing slows weeds and staining — prevention at a fraction of re-laying cost."
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "My block paving has sunk where cars turn — can it be saved?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually, yes. Local settlement under turning wheels means the base has compacted or migrated in that area; we lift the blocks, rebuild and compact the base, and re-lay the same blocks. If sinking is appearing across the whole driveway, that's an under-built sub-base and we'll be honest that re-laying patches only chases the problem around."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need planning permission to repair my driveway?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No — like-for-like repair is outside the planning rules, and you can repair or replace up to 5 m² with any material. Permission only becomes a question when you enlarge the surfaced area or resurface entirely with an impermeable material, and on Article 4 or conservation-area streets where frontage changes are more tightly controlled. We flag it if your job touches any of those lines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does water pond on my driveway after rain?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "One of three causes, in descending order of likelihood around here: a soakaway or channel drain that's silted up (ten minutes' diagnosis, modest fix); settlement that's created a low spot (re-lay the affected area); or falls that were built wrong from the start (a bigger conversation). The assessment visit tells you which you have before anyone quotes anything. How driveway drainage should work is covered in our SuDS drainage guide ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you resurface over my old concrete drive instead of digging it up?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If the slab is sound — no rocking sections, no active cracks, somewhere legitimate for water to go — a resin bound overlay gives you a new surface at roughly half the full build-up cost. We test before we promise: an overlay inherits every fault in the base beneath it, which is why we refuse the marginal ones."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is re-sanding and sealing actually worth it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On structurally sound block paving, it's the best value work we do: joints refilled with kiln-dried sand restore the interlock (loose joints are how blocks start rocking and edges start creeping), and a quality sealer slows weeds and staining. It's maintenance that prevents the £100-per-m² problems, at under £15 per m²."
+            }
+          }
+        ]
       }
     ]
   }

@@ -263,47 +263,120 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Does a gravel driveway need planning permission?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No — gravel is fully permeable, so it sits within permitted development at any size. Boundary works are the caveat: new or widened gateways onto a classified road, and gates or walls on conservation-area and Article 4 streets, can need consent even when the surface doesn't."
-        }
+        "@type": "Service",
+        "name": "Gravel Driveways",
+        "serviceType": "Gravel driveway installation",
+        "description": "Stabilised gravel driveways for larger plots around Penn, Seer Green and across South Bucks. The country-house look at the lowest premium cost — grids, edging, honest cost table, 10-year guarantee.",
+        "url": "https://southbucksdriveways.co.uk/gravel-driveways.html",
+        "provider": {
+          "@id": "https://southbucksdriveways.co.uk/#business"
+        },
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Beaconsfield"
+          },
+          {
+            "@type": "Place",
+            "name": "Gerrards Cross"
+          },
+          {
+            "@type": "Place",
+            "name": "Chalfont St Peter"
+          },
+          {
+            "@type": "Place",
+            "name": "Chalfont St Giles"
+          },
+          {
+            "@type": "Place",
+            "name": "Little Chalfont"
+          },
+          {
+            "@type": "Place",
+            "name": "Amersham"
+          },
+          {
+            "@type": "Place",
+            "name": "Penn"
+          },
+          {
+            "@type": "Place",
+            "name": "Knotty Green"
+          },
+          {
+            "@type": "Place",
+            "name": "Seer Green"
+          },
+          {
+            "@type": "Place",
+            "name": "Jordans"
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Won't gravel scatter everywhere and rut under the cars?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Loose-tipped gravel does. Stabilisation grids hold the stone captive under wheel loads, angular stone locks together instead of rolling, and edging plus a threshold apron keep the boundary clean."
-        }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://southbucksdriveways.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Gravel Driveways",
+            "item": "https://southbucksdriveways.co.uk/gravel-driveways.html"
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "How much maintenance does a gravel driveway need?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "On a gridded drive: an occasional rake, a top-up of matching stone every few years, and weed treatment as growth appears on the surface. Roughly a weekend a year."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is gravel a security benefit?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It's a modest deterrent rather than a security system: you hear arrivals on gravel long before you see them, which is part of its popularity on larger, more private plots."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What happens on a sloped section?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Beyond a gentle fall, stone migrates downhill regardless of grids, so on slopes we transition to a bound surface — resin bound gravel keeps the same stone appearance — with a channel drain at the bottom."
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does a gravel driveway need planning permission?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No — gravel is fully permeable, so it sits within permitted development at any size. The only caveats are boundary works: new or widened gateways onto a classified road, and gates or walls on conservation-area and Article 4 streets, can need consent even when the surface doesn't. We check that on the design visit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Won't it scatter everywhere and rut under the cars?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Loose-tipped gravel does. Stabilisation grids hold the stone captive under wheel loads, angular stone locks together instead of rolling, and edging plus a threshold apron keep the boundary clean. That combination is the difference between the gravel drives that work and the ones that generate the complaints."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much maintenance does it really need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On a gridded drive: an occasional rake of the surface dressing, a top-up of stone every few years (we leave you the exact stone specification so it always matches), and weed treatment as it appears — growth roots in wind-blown dust on the surface, not up through the membrane. Budget a weekend a year, not a fortnightly chore."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is gravel secure enough? We're on a quiet lane.",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Many of our customers count the sound as a feature: you hear anything arrive on gravel long before you see it, which is part of why it remains popular on larger, more private plots. It's a modest deterrent rather than a security system — but it's one your driveway provides for free."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens on the slope down to our garage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Gravel and gradients are honest enemies — beyond a gentle fall, stone migrates downhill no matter the grid. On sloped sections we transition to a bound surface (resin bound gravel keeps the same stone appearance) and put a channel drain at the bottom. You keep the look; the slope keeps its surface. More on falls, channels and soakaways in our drainage guide ."
+            }
+          }
+        ]
       }
     ]
   }
