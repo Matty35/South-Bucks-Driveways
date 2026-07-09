@@ -495,6 +495,48 @@ h1::after {
   color: var(--accent-strong);
 }
 
+/* Cost tables — figures always mono; wide tables scroll in their wrapper */
+.table-wrap {
+  overflow-x: auto;
+  margin-bottom: var(--space-4);
+}
+
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.cost-table caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: var(--space-2);
+}
+
+.cost-table th,
+.cost-table td {
+  text-align: left;
+  padding: var(--space-3) var(--space-4) var(--space-3) 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.cost-table th {
+  font-weight: 600;
+}
+
+.cost-table td.figure {
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  color: var(--accent-strong);
+  font-weight: 600;
+}
+
+.table-note {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
 /* FAQ (details/summary) */
 .faq details {
   border-bottom: 1px solid var(--line);
