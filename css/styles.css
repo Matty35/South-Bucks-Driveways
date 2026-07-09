@@ -50,13 +50,14 @@
   --link:           var(--woodland);
   --focus-ring:     var(--bronze-deep);
 
-  /* Type scale (mobile first; stepped up at 768/1100) */
-  --text-sm:   0.875rem;
+  /* Type scale (mobile first; stepped up at 768/1100).
+     --text-sm is 1rem below 768px so no text renders under 16px on mobile. */
+  --text-sm:   1rem;
   --text-base: 1rem;
   --text-lg:   1.125rem;
   --text-xl:   1.375rem;
   --text-2xl:  1.75rem;
-  --text-3xl:  2.25rem;
+  --text-3xl:  2rem;
   --leading-body: 1.6;
   --leading-tight: 1.15;
 
@@ -160,7 +161,7 @@ a:hover {
 /* Prices and measurements always render in mono for scannability */
 .data {
   font-family: var(--font-mono);
-  font-size: 0.95em;
+  font-size: 1em; /* 0.95em from 768px up; never below 16px on mobile */
   letter-spacing: -0.01em;
 }
 
@@ -371,7 +372,7 @@ h1::after {
 }
 
 .site-nav a[aria-current="page"] {
-  box-shadow: inset 3px 0 0 var(--accent);
+  box-shadow: inset 3px 0 0 var(--text-invert);
   padding-left: var(--space-3);
 }
 
@@ -381,7 +382,7 @@ h1::after {
 .hero {
   background: var(--surface-invert);
   color: var(--text-invert);
-  padding-block: var(--space-7);
+  padding-block: var(--space-5) var(--space-6); /* tight on mobile so hero + CTA fit one viewport */
 }
 
 .hero h1,
@@ -454,7 +455,7 @@ h1::after {
 }
 
 .card:has(h3 a):hover {
-  border-color: var(--accent-strong);
+  border-color: var(--woodland);
 }
 
 /* Materials comparison teaser */
@@ -514,6 +515,20 @@ h1::after {
 .table-wrap {
   overflow-x: auto;
   margin-bottom: var(--space-4);
+  /* scroll hint: edge shadows appear only while more columns are off-screen */
+  --table-bg: var(--surface);
+  background:
+    linear-gradient(to right, var(--table-bg) 30%, transparent) 0 0,
+    linear-gradient(to left, var(--table-bg) 30%, transparent) 100% 0,
+    radial-gradient(farthest-side at 0 50%, rgb(38 48 43 / 0.22), transparent) 0 0,
+    radial-gradient(farthest-side at 100% 50%, rgb(38 48 43 / 0.22), transparent) 100% 0;
+  background-repeat: no-repeat;
+  background-size: 48px 100%, 48px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.section-alt .table-wrap {
+  --table-bg: var(--surface-alt);
 }
 
 .cost-table {
@@ -558,6 +573,7 @@ h1::after {
 }
 
 .faq summary {
+  list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -567,6 +583,10 @@ h1::after {
   font-weight: 600;
   cursor: pointer;
   border-radius: var(--radius-sm);
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
 }
 
 .faq summary::after {
@@ -599,7 +619,7 @@ h1::after {
 .checklist li {
   padding-left: var(--space-5);
   margin-bottom: var(--space-2);
-  background-image: radial-gradient(circle at 5px 5px, var(--accent-strong) 4px, transparent 4.5px);
+  background-image: radial-gradient(circle at 5px 5px, var(--woodland) 4px, transparent 4.5px);
   background-repeat: no-repeat;
   background-position: 0 0.45em;
 }
@@ -695,6 +715,10 @@ textarea {
    15. BREAKPOINTS — 480 / 768 / 1100
    -------------------------------------------------------------------------- */
 @media (min-width: 480px) {
+  :root {
+    --text-3xl: 2.25rem;
+  }
+
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -706,8 +730,17 @@ textarea {
 
 @media (min-width: 768px) {
   :root {
+    --text-sm: 0.875rem;
     --text-2xl: 2rem;
     --text-3xl: 2.75rem;
+  }
+
+  .hero {
+    padding-block: var(--space-7);
+  }
+
+  .data {
+    font-size: 0.95em;
   }
 
   .nav-toggle {
@@ -730,7 +763,7 @@ textarea {
   }
 
   .site-nav a[aria-current="page"] {
-    box-shadow: inset 0 -3px 0 var(--accent);
+    box-shadow: inset 0 -3px 0 var(--text-invert);
     padding-left: var(--space-3);
   }
 
