@@ -69,8 +69,8 @@ Every issue below was found by script, fixed, and re-verified by re-running the 
 - **Placeholder text:** visible `[Registered address line …]` blocks removed from all 17 footers (replaced
   with an HTML comment TODO; the LocalBusiness schema keeps machine-readable TODO markers). Contact-page
   "details will appear here" copy replaced with the real contact routes. Remaining known-placeholder
-  values that *look* real and are tracked in TECHNICAL-CHECKLIST.md: the phone number (01494 000 000) and
-  the schema address fields — these need real data, not different copy.
+  values tracked in TECHNICAL-CHECKLIST.md: the schema address fields (phone is now the live number,
+  01494 328592) — the address needs real data, not different copy.
 - **Internal links:** full crawl of every `href` on all 17 pages — zero 404s (all targets resolve,
   including the `/guides/` directory index).
 

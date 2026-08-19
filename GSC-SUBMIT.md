@@ -48,7 +48,7 @@ Day two, request the wedge and comparison guides (`driveways-conservation-areas-
 
 ## 3. UK citations & directories (10 targets, in priority order)
 
-Use the canonical NAP exactly as it appears in the site footer and llms.txt — same name ("South Bucks Resin & Driveways"), same service description, same phone format on every listing. Inconsistent citations dilute local rankings. Do not create listings until the real phone number and address replace the placeholders.
+Use the canonical NAP exactly as it appears in the site footer and llms.txt — same name ("South Bucks Resin & Driveways"), same service description, same phone format on every listing. Inconsistent citations dilute local rankings. The phone number (01494 328592) is live; do not create listings until the real address also replaces its placeholder.
 
 | # | Directory | Why it matters for this trade |
 |---|---|---|

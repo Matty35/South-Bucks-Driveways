@@ -56,7 +56,7 @@ Note: raw bronze (#A8763E) is used only for non-text decoration (aggregate band,
 
 ## Outstanding TODOs before launch
 
-- Replace phone placeholder (01494 000 000 / +44-1494-000000) in page bodies, footers and LocalBusiness schema.
+- ~~Replace phone placeholder~~ DONE: live number 01494 328592 in page bodies, footers, LocalBusiness schema and llms.txt.
 - Replace NAP address placeholders in footers and LocalBusiness schema (marked TODO-*).
 - Add real project imagery to /images/ (then add og:image/twitter:image and populate galleries).
 - Add review schema only once genuine public reviews exist (see TODO comment in index.html).
