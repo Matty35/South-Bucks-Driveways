@@ -30,8 +30,8 @@ Every item below was verified by script against the committed HTML — regenerat
 - **Sitemap**: sitemap.xml lists all 17 pages with correct https://southbucksdriveways.co.uk URLs — ✅ complete, no missing/extra entries
 - **robots.txt**: references sitemap ✅; explicitly allows GPTBot, ClaudeBot, PerplexityBot, Google-Extended ✅ (plus OAI-SearchBot, CCBot, Applebot-Extended, meta-externalagent and general allow-all)
 - **Titles/descriptions**: all unique across the site ✅
-- **Images**: the site currently ships zero raster images; the audit column confirms none are missing lazy/width/height. POLICY: any image added later MUST carry `loading="lazy"` (below the fold), explicit `width`/`height`, and descriptive `alt`.
-- **og:image / twitter:image**: deliberately absent (no brand imagery yet); TODO comments sit in every page head.
+- **Images**: five real project photos ship as WebP at two sizes (800px cards in galleries, 1600px-class full for og:image), EXIF-stripped, each with `loading="lazy"`, explicit `width`/`height` and descriptive `alt`. POLICY unchanged for future images: WebP, lazy below the fold, dimensions, alt.
+- **og:image / twitter:image**: live on every page (golden period-frontage resin photo, 1170×827 WebP) with twitter:card summary_large_image.
 - **Critical CSS**: ~7.6 KB inlined per page (tokens, reset, typography, header/nav, hero, buttons, breakpoints, reduced-motion); full stylesheet preloaded and applied via `media="print"` swap with `<noscript>` fallback.
 - **JS**: single 0.6 KB script, `defer`red; no third-party JS. Fonts: preconnect to fonts.googleapis.com and fonts.gstatic.com (crossorigin) on every page.
 
@@ -58,6 +58,6 @@ Note: raw bronze (#A8763E) is used only for non-text decoration (aggregate band,
 
 - ~~Replace phone placeholder~~ DONE: live number 01494 328592 in page bodies, footers, LocalBusiness schema and llms.txt.
 - Replace NAP address placeholders in footers and LocalBusiness schema (marked TODO-*).
-- Add real project imagery to /images/ (then add og:image/twitter:image and populate galleries).
+- ~~Add real project imagery~~ DONE: five resin project photos live in /images/, galleries on the homepage and resin page, og:image site-wide. Next: before/after pairs and town-captioned case studies as they come.
 - Add review schema only once genuine public reviews exist (see TODO comment in index.html).
 - Wire the contact form to a form handler (currently action="#").
