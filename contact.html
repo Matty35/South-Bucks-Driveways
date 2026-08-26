@@ -66,7 +66,12 @@
 
     <section class="section">
       <div class="container split">
-        <form action="#" method="post" aria-label="Quotation request">
+        <form name="quote-request" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" aria-label="Quotation request">
+          <input type="hidden" name="form-name" value="quote-request">
+          <p class="hidden-field" aria-hidden="true">
+            <label for="bot-field">Don't fill this in if you're human</label>
+            <input id="bot-field" name="bot-field" tabindex="-1" autocomplete="off">
+          </p>
           <label for="name">Your name</label>
           <input id="name" name="name" type="text" autocomplete="name" required>
 

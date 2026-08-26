@@ -687,6 +687,14 @@ textarea {
   resize: vertical;
 }
 
+/* Spam honeypot — visually removed, present for bots */
+.hidden-field {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  overflow: hidden;
+}
+
 /* --------------------------------------------------------------------------
    14. FOOTER
    -------------------------------------------------------------------------- */

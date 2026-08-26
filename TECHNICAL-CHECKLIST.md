@@ -60,4 +60,4 @@ Note: raw bronze (#A8763E) is used only for non-text decoration (aggregate band,
 - Replace NAP address placeholders in footers and LocalBusiness schema (marked TODO-*).
 - ~~Add real project imagery~~ DONE: five resin project photos live in /images/, galleries on the homepage and resin page, og:image site-wide. Next: before/after pairs and town-captioned case studies as they come.
 - Add review schema only once genuine public reviews exist (see TODO comment in index.html).
-- Wire the contact form to a form handler (currently action="#").
+- ~~Wire the contact form~~ DONE: Netlify Forms (form name "quote-request", honeypot spam trap, success page /thanks.html — noindex, deliberately absent from sitemap.xml). MANUAL STEP REMAINING: in Netlify — Site configuration → Forms → enable form detection, then Forms → Form notifications → add Email notification to southbucksdriveways@hotmail.com.
