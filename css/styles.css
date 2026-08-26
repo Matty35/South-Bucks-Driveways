@@ -608,6 +608,40 @@ h1::after {
   max-width: 68ch;
 }
 
+
+/* Project gallery — photo cards with captions */
+.gallery figure {
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  display: block;
+}
+
+.gallery figcaption {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  padding-top: var(--space-2);
+}
+
+@media (min-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* --------------------------------------------------------------------------
    12. TRUST STRIP / CHECKLISTS
    -------------------------------------------------------------------------- */
